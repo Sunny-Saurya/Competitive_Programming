@@ -8,23 +8,15 @@ void solve(){
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
+    int maxDist = arr[0];
+    for(int i = 1; i < n; i++){
+        int diff = abs(arr[i] - arr[i-1]);
+        maxDist = max(maxDist, diff);
 
-    int initialCapcityOfTank = arr[0];
-    int temp = initialCapcityOfTank;
-    int count = 1;
-    
-    for(int i = 1; i <= p; i++){
-        if(arr[i] != i){
-            count++;
-            temp--;
-            if(temp == 0){
-                initialCapcityOfTank +=  count;
-            }
-        }
-        else{
-            initialCapcityOfTank = temp;
-        }
     }
+
+    int temp = 2* abs(arr[n-1]-p);
+    maxDist = max(maxDist, temp);
 }
 
 int main() {

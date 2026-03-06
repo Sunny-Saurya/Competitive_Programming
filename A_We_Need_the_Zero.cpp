@@ -33,3 +33,6 @@ int main()
     }
     return 0;
 }
+
+// Time Complexity (TC): O(n) = O(1000)
+// Space Complexity (SC): O(n) = O(1000)
